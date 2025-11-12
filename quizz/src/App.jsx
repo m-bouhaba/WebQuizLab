@@ -9,14 +9,14 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path= "/" element={<HomePage/>}/>
-      <Route path= "/quiz" element={<Quizpage/>}/>
-      <Route path= "/result" element={<Resultpage/>}/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/quiz" element={<Quizpage />} />
+        <Route path="/result" element={<Resultpage />} />
 
 
-    </Routes>
-    
+      </Routes>
+
     </BrowserRouter>
   );
 }
