@@ -11,7 +11,10 @@ const [len, setLen] = useState(questions.length)
 const [score, setScore] = useState(0)
 
   const nextquestion = (ind) => {
+    console.log("------------------------" + ind)
     if(index < len){
+
+      console.log("=====" + score)
       if(questions[index].answer == questions[index].options[ind]){
           setScore(score + 1);
       }
@@ -28,14 +31,15 @@ const [score, setScore] = useState(0)
 
   } else {
       return (
-        <>
-
+        <div className='bodyquiz'>
+        <div className='quizcontainer'>
           <h1>{questions[index].question}</h1>
-        
+
             {questions[index].options.map((option, optionIndex) => 
               <button key={optionIndex} onClick={() => nextquestion(optionIndex)}>{option}</button>
             )}
-        </>
+        </div>
+        </div>
       )
   }
 }
